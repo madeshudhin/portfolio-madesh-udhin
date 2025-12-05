@@ -1,143 +1,102 @@
-:root {
-    --primary: #26007a;
-    --accent: #ffbb00;
-    --bg: #f6f8fa;
-    --text: #22223b;
-    --white: #ffffff;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Madesh | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-html {
-    scroll-behavior: smooth;
-}
+<body>
 
-body {
-    margin: 0;
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background: var(--bg);
-    color: var(--text);
-}
+    <!-- Navbar -->
+    <header>
+        <nav>
+            <h2 class="logo">Madesh<span>.</span></h2>
 
-.container {
-    width: 90%;
-    max-width: 900px;
-    margin: 0 auto;
-}
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
 
-header.hero {
-    background: var(--primary);
-    color: var(--white);
-    padding: 2.5em 0 1.5em 0;
-    text-align: center;
-}
+            <!-- Mobile Menu Icon -->
+            <div class="menu-icon" id="menuBtn">☰</div>
 
-header.hero h1 {
-    font-size: 2.4em;
-    letter-spacing: 1px;
-    margin: 0;
-}
+            <!-- Dark Mode Toggle -->
+            <div class="toggle-btn" id="themeToggle">🌙</div>
+        </nav>
+    </header>
 
-header.hero h2 {
-    font-size: 1.2em;
-    margin: 1em 0 0.5em 0;
-    font-weight: 400;
-}
+    <!-- Hero Section -->
+    <section id="home" class="hero fade-in">
+        <div class="hero-text">
+            <h1>Hi, I'm <span class="primary">Madesh</span></h1>
+            <h2 class="typing" id="typingText"></h2>
+            <a href="#projects" class="btn">View My Work</a>
+        </div>
+    </section>
 
-header.hero .contact-list {
-    display: flex;
-    justify-content: center;
-    gap: 2em;
-    padding: 0;
-    list-style: none;
-    margin-bottom: 0.8em;
-}
+    <!-- About Section -->
+    <section id="about" class="about fade-in">
+        <h2 class="section-title">About Me</h2>
+        <p>
+            I love creating modern, beautiful websites and learning new technologies.
+            I build user-friendly applications using HTML, CSS, JavaScript, and Java.
+        </p>
+    </section>
 
-header.hero .contact-list li {
-    font-size: 0.97em;
-}
+    <!-- Skills Section -->
+    <section id="skills" class="skills fade-in">
+        <h2 class="section-title">Skills</h2>
+        <div class="skill-box">
+            <p>HTML</p>
+            <p>CSS</p>
+            <p>JavaScript</p>
+            <p>Java</p>
+            <p>SQL</p>
+            <p>Bootstrap</p>
+        </div>
+    </section>
 
-header.hero .summary {
-    font-size: 1.08em;
-    max-width: 650px;
-    margin: 1.2em auto 0 auto;
-    line-height: 1.5;
-}
+    <!-- Projects Section -->
+    <section id="projects" class="projects fade-in">
+        <h2 class="section-title">Projects</h2>
 
-.main-nav {
-    background: var(--accent);
-    box-shadow: 0 2px 6px #00000014;
-    text-align: center;
-}
+        <div class="project-card">
+            <h3>Portfolio Website</h3>
+            <p>Modern portfolio website using HTML, CSS, JS, animations, and dark mode.</p>
+        </div>
 
-.main-nav a {
-    display: inline-block;
-    padding: 1em 1.4em;
-    color: var(--primary);
-    font-weight: 500;
-    text-decoration: none;
-    letter-spacing: 0.5px;
-    transition: background 0.2s;
-}
+        <div class="project-card">
+            <h3>Student Management App</h3>
+            <p>Java Swing desktop app with MySQL backend.</p>
+        </div>
 
-.main-nav a:hover {
-    background: var(--primary);
-    color: var(--white);
-}
+        <div class="project-card">
+            <h3>Inventory System</h3>
+            <p>Java and SQL-based inventory management application.</p>
+        </div>
+    </section>
 
-.section {
-    background: var(--white);
-    margin: 2em 0;
-    padding: 2em 1.5em;
-    border-radius: 14px;
-    box-shadow: 0 2px 12px #eceeffb8;
-}
+    <!-- Contact Section -->
+    <section id="contact" class="contact fade-in">
+        <h2 class="section-title">Contact Me</h2>
+        <form id="contactForm">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Email Address" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn">Send</button>
+        </form>
+        <p id="status"></p>
+    </section>
 
-.section h3 {
-    color: var(--primary);
-    margin-top: 0;
-}
+    <footer>
+        <p>© 2025 Madesh | All Rights Reserved</p>
+    </footer>
 
-.section h4 {
-    margin-top: 1.5em;
-    color: var(--accent);
-}
-
-.section ul {
-    margin: 1em 0 0 0;
-    padding: 0 0 0 1.6em;
-}
-
-.project {
-    margin-bottom: 1.7em;
-}
-
-footer {
-    background: var(--primary);
-    color: var(--white);
-    text-align: center;
-    padding: 1.2em 0;
-    font-size: 1.04em;
-    margin-top: 2em;
-}
-
-.declaration {
-    margin-top: 2em;
-    font-weight: 400;
-    color: #555;
-    font-size: 1.01em;
-}
-
-@media (max-width: 700px) {
-    .container {
-        width: 97%;
-    }
-    .section {
-        padding: 1.1em 0.7em;
-    }
-    header.hero h1 {
-        font-size: 1.5em;
-    }
-    .main-nav a {
-        padding: 0.6em 0.8em;
-        font-size: 0.98em;
-    }
-}
+    <script src="script.js"></script>
+</body>
+</html>
